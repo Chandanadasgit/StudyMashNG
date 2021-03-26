@@ -1,5 +1,6 @@
 import { createDirective } from "@angular/compiler/src/core";
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { IProperty } from "../IProperty";
 
 
 
@@ -10,10 +11,6 @@ import { Component } from "@angular/core";
 })
 export class PropertyCardComponent
 {
-    property:any={
-      "Id":1,
-      "Name":"Birla House",
-      "Type":"House",
-      "Price":12000
-    }
+  @Input() property:IProperty;
+
 }
